@@ -1,0 +1,10 @@
+rootProject.name = 'MobileDxRNSample'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':genesys-mobiledx-chat-rn-module'
+project(':genesys-mobiledx-chat-rn-module').projectDir = new File(rootProject.projectDir,
+        '../node_modules/genesys-mobiledx-chat-rn-module/android')
+// for local usage of the library:
+//'../../mobile-genesys-chat-rn-module/android')//
+
