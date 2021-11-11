@@ -11,8 +11,8 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		79E18848ADC54B171EC34166 /* Pods_MobileDxRNSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0192CF138BB3E6D30888E384 /* Pods_MobileDxRNSample.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8CFC892CB9BF25E2CA382054 /* Pods_MobileDxRNSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13A306B3089B22F1AA785002 /* Pods_MobileDxRNSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,16 +29,16 @@
 		00E356EE1AD99517003FC87E /* MobileDxRNSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileDxRNSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* MobileDxRNSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileDxRNSampleTests.m; sourceTree = "<group>"; };
-		13A306B3089B22F1AA785002 /* Pods_MobileDxRNSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDxRNSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0192CF138BB3E6D30888E384 /* Pods_MobileDxRNSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileDxRNSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* MobileDxRNSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDxRNSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MobileDxRNSample/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MobileDxRNSample/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MobileDxRNSample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MobileDxRNSample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MobileDxRNSample/main.m; sourceTree = "<group>"; };
+		29BC8055718994B75410D23E /* Pods-MobileDxRNSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDxRNSample.release.xcconfig"; path = "Target Support Files/Pods-MobileDxRNSample/Pods-MobileDxRNSample.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = MobileDxRNSample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A32570D9098E5B127A99540E /* Pods-MobileDxRNSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDxRNSample.release.xcconfig"; path = "Target Support Files/Pods-MobileDxRNSample/Pods-MobileDxRNSample.release.xcconfig"; sourceTree = "<group>"; };
-		C03C110099FC5BD98A4E69D5 /* Pods-MobileDxRNSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDxRNSample.debug.xcconfig"; path = "Target Support Files/Pods-MobileDxRNSample/Pods-MobileDxRNSample.debug.xcconfig"; sourceTree = "<group>"; };
+		8204F3542D3D1C8371EF9D71 /* Pods-MobileDxRNSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileDxRNSample.debug.xcconfig"; path = "Target Support Files/Pods-MobileDxRNSample/Pods-MobileDxRNSample.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CFC892CB9BF25E2CA382054 /* Pods_MobileDxRNSample.framework in Frameworks */,
+				79E18848ADC54B171EC34166 /* Pods_MobileDxRNSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +78,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0FCE986CB72486BE3C2C4CB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8204F3542D3D1C8371EF9D71 /* Pods-MobileDxRNSample.debug.xcconfig */,
+				29BC8055718994B75410D23E /* Pods-MobileDxRNSample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* MobileDxRNSample */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,19 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				13A306B3089B22F1AA785002 /* Pods_MobileDxRNSample.framework */,
+				0192CF138BB3E6D30888E384 /* Pods_MobileDxRNSample.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4D3F17D0331B8E87B37C26FF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C03C110099FC5BD98A4E69D5 /* Pods-MobileDxRNSample.debug.xcconfig */,
-				A32570D9098E5B127A99540E /* Pods-MobileDxRNSample.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -125,7 +125,7 @@
 				00E356EF1AD99517003FC87E /* MobileDxRNSampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				4D3F17D0331B8E87B37C26FF /* Pods */,
+				0FCE986CB72486BE3C2C4CB2 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -166,13 +166,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MobileDxRNSample" */;
 			buildPhases = (
-				CFE58661810483DFDCF2A52F /* [CP] Check Pods Manifest.lock */,
+				54163A2728C193DF62322B52 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				66CC47D558B192F46854A12B /* [CP] Embed Pods Frameworks */,
+				4132A06DEF880E99875E60B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,7 +253,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		66CC47D558B192F46854A12B /* [CP] Embed Pods Frameworks */ = {
+		4132A06DEF880E99875E60B0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,7 +270,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MobileDxRNSample/Pods-MobileDxRNSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CFE58661810483DFDCF2A52F /* [CP] Check Pods Manifest.lock */ = {
+		54163A2728C193DF62322B52 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,7 +393,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C03C110099FC5BD98A4E69D5 /* Pods-MobileDxRNSample.debug.xcconfig */;
+			baseConfigurationReference = 8204F3542D3D1C8371EF9D71 /* Pods-MobileDxRNSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -419,7 +419,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A32570D9098E5B127A99540E /* Pods-MobileDxRNSample.release.xcconfig */;
+			baseConfigurationReference = 29BC8055718994B75410D23E /* Pods-MobileDxRNSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

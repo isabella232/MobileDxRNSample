@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "genesys-mobiledx-chat-rn-module": "1.0.4",
     "jetifier": "^2.0.0",
     "react": "17.x",
     "react-native": "^0.64.2"
@@ -20,7 +21,6 @@
     "@react-native-community/eslint-config": "^3.0.1",
     "babel-jest": "^27.3.1",
     "eslint": "^8.2.0",
-    "genesys-mobiledx-chat-rn-module": "../RN/mobile-genesys-chat-rn-module",
     "jest": "^27.3.1",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.1"
