@@ -6,80 +6,58 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {StyleSheet, Text, TextInput, View, Button} from 'react-native';
-import ChatButton from './ChatButton'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { ChatForm } from './ChatForm.js';
+import  ChatButton  from './ChatButton';
+// import { NativeModules } from 'react-native';
 
-Props = {};
-export default class App extends Component {
+import GenDXChatModule from 'genesys-mobiledx-chat-rn-module';
 
-  constructor(props) {
-    super(props);
-    this.state = {text: ''};
+export default function App() {
+
+
+  const onSubmit = (data) => {
+console.log(`got data = ${data}`)
+    GenDXChatModule.startChatComponent(data.deploymentId, data.domain,
+    data.tokenStoreKey, data.logging, data.email, data.phoneNumber, data.firstName, data.lastNAme);
+    /*GenDXChatModule.startChatComponent("f8aad9d7-f8e7-48e9-ab02-eef92bc4fd2f", "inindca.com",
+    "com.genesys.messenger.poc", true, "tehila.rozin@genesys.com", "666-666-66", "Fame", "RO");*/
   }
-  render() {
-    return (
-      <View style={styles.container}>
-        <ChatButton/>
-      </View>
-    );
-  }
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Genesys Chat</Text>
+
+      <Text style={styles.title_sub}>Fill the following parameters to start your chat</Text>
+      
+      <ChatButton onPress={onSubmit}/>
+      
+      <ChatForm onSubmit={onSubmit} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#2e303c',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-});
-
-
-/*
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import ChatButton from './ChatButton'
-
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-
-        <ChatButton/>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    paddingLeft:15,
+    paddingRight:15,
   },
-  welcome: {
+  title: {
+    color :'orange',
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    fontWeight: 'bold',
+    marginTop:10,
+    marginBottom: 10
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  title_sub: {
+    color :'#ffeeaa',
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginTop:10
+  }
 });
-*/

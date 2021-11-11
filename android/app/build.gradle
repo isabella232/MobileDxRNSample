@@ -197,20 +197,34 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
+    // implementation project(':react-native-gesture-handler')
+
     implementation ("com.facebook.react:react-native:+")  {
         exclude group: 'com.facebook.fbjni', module: 'fbjni-java-only'
         exclude group: 'com.facebook.yoga', module: 'proguard-annotations'
     }
+    // implementation ('com.facebook.fbjni:fbjni-java-only'){
+    //     version {
+    //         strictly '0.0.4'
+    //     }
+    // }
+    // implementation ('com.facebook.yoga:proguard-annotations'){
+    //     version {
+    //         strictly '1.19.0'
+    //     }
+    // }
+
     implementation "org.webkit:android-jsc:+"
 
     implementation project(':genesys-mobiledx-chat-rn-module')
-
+    // implementation project(':react-native-check-box')
     //implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.32"
-    implementation 'com.google.android.material:material:1.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.32" // why is that here
+    implementation 'com.google.android.material:material:1.3.0' // sets right the messages bubble
     
-    
+    // implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
     /*implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
@@ -242,4 +256,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     into 'libs'
 }
 
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)
+//apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

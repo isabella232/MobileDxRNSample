@@ -1,7 +1,6 @@
 {
   "name": "MobileDxRNSample",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -10,10 +9,19 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/checkbox": "^0.5.9",
+    "expo-constants": "^12.1.3",
+    "genesys-mobiledx-chat-rn-module": "1.0.2",
     "jetifier": "^2.0.0",
-    "react": "17.x",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-hook-form": "^7.19.1",
     "react-native": "^0.64.2",
-    "genesys-mobiledx-chat-rn-module": "1.0.2"
+    "react-native-check-box": "^2.1.7",
+    "react-native-material-textfield": "^0.16.1",
+    "react-native-reanimated": "~2.2.0",
+    "react-native-web": "0.17.1",
+    "react-native-windows": "^0.64.5"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -21,9 +29,9 @@
     "@react-native-community/eslint-config": "^3.0.1",
     "babel-jest": "^27.3.1",
     "eslint": "^8.2.0",
+    "genesys-mobiledx-chat-rn-module": "1.0.2",
     "jest": "^27.3.1",
     "metro-react-native-babel-preset": "^0.66.2",
-    "genesys-mobiledx-chat-rn-module": "1.0.2",
     "react-test-renderer": "17.0.1"
   },
   "jest": {
