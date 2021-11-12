@@ -7,6 +7,8 @@ import Constants from 'expo-constants';
 
 import { FormInputField } from './FormInputField';
 import Button from './PButton';
+import theme from './theme.style'
+import { AppTheme } from 'react-native-windows';
 //import { onChange } from 'react-native-reanimated';
 // import { ScrollView } from 'react-native-gesture-handler';
 
@@ -76,8 +78,8 @@ export const ChatForm = (props) => {
         title="Logging"
         disabled={false}
         //value={toggleCheckBox}
-        checkBoxColor= 'orange' 
-        checkedCheckBoxColor = 'white'
+        checkBoxColor= 'black' 
+        checkedCheckBoxColor = {theme.genesysOrange}
         onChange = {onChange}
         onClick={()=>{
             value = !value
@@ -128,11 +130,16 @@ export const ChatForm = (props) => {
         );
     };
     
+    // const mainBack = '#2e303c'
+    
+//const 
+
     const styles = StyleSheet.create({
+        
         label: {
-            color: 'white',
+            color: theme.textColor,
             marginTop: 16,
-            marginBottom: 16,
+            marginBottom: 8,
             width:'100%',
         },
         row_container_2: {
@@ -141,18 +148,18 @@ export const ChatForm = (props) => {
             alignSelf: 'flex-start',
             justifyContent: 'flex-start',
             alignItems:'baseline',
-            backgroundColor: '#2e303c',
-            marginTop:10,
+            backgroundColor: theme.mainBack,
+            marginTop:8,
         },
         row_container: {
             flex: 1,
             flexDirection: "row",
             alignSelf: 'stretch',
             justifyContent: 'space-between',
-            paddingTop: Constants.statusBarHeight,
+            
             padding: 15,
-            backgroundColor: '#2e303c',
-            marginTop:4
+            backgroundColor: theme.mainBack,
+            marginTop: 6
         },
         container: {
             flex: 1,
@@ -160,22 +167,25 @@ export const ChatForm = (props) => {
             alignSelf: 'stretch',
             justifyContent: 'flex-start',
             padding: 15,
-            backgroundColor: '#2e303c',
+            backgroundColor: theme.mainBack,
         },
         input: {
-            backgroundColor: 'white',
-            height: 34,
-            padding: 5,
+            backgroundColor: '#dddddd',
+            height: 36,
+            borderColor:'#dddddd',
+            borderWidth:1,
+            padding: 8,
             borderRadius: 4,
         },
         checkbox: {
-            
-            color:'white',
-            borderColor: 'white',
-            
+            borderColor: 'black',
+            borderWidth:1,
             marginTop: 0,
-            
             borderRadius:4,
+        }, 
+        button: {
+            height:45,
+            
         }
     });
     

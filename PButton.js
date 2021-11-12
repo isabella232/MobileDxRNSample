@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Text, View, StyleSheet, Pressable } from 'react-native';
+import theme from './theme.style'
 
 export default function Button(props) {
   const { onPress, title = 'Save', style } = props;
@@ -18,11 +19,11 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 30,
+    paddingVertical: 8,
+    paddingHorizontal: 25,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: '#ff9900',
+    backgroundColor: theme.genesysOrange,
   },
   text: {
     fontSize: 16,

@@ -23,9 +23,9 @@ export const FormInputField = (props) => {
           <TextInput
             style={{
               ...props.style.input,
-              ...(props.error ? {
-                border: "red"
-              } : { })
+              ...(props.error && {
+                borderColor: '#ff0000'
+              })
             }}
             onBlur={ onBlur }
             onChangeText={value => onChange(value)}
@@ -38,7 +38,7 @@ export const FormInputField = (props) => {
         rules={{ required: props.required }}
       />
 
-      {props.error?.type === 'required' && <Text style={{ color: "red" }}>{props.title} is required</Text>}
+      {props.required && <Text style={{ color: "orange" }}>* required</Text>}
     
     </View>
   );

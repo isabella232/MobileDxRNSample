@@ -7,9 +7,11 @@
  */
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { ChatForm } from './ChatForm.js';
 import  ChatButton  from './ChatButton';
+import theme from './theme.style'
+
 // import { NativeModules } from 'react-native';
 
 import GenDXChatModule from 'genesys-mobiledx-chat-rn-module';
@@ -27,11 +29,13 @@ console.log(`got data = ${data}`)
 
   return (
     <View style={styles.container}>
+      <View style={{flexDirection: "row", justifyContent: 'center'}}>
+      <Image style={{width:35, height:35,marginTop:5}} source={require('./img/genesys-logo-red-180.png')}/>
       <Text style={styles.title}>Genesys Chat</Text>
-
+      </View>
       <Text style={styles.title_sub}>Fill the following parameters to start your chat</Text>
       
-      <ChatButton onPress={onSubmit}/>
+      
       
       <ChatForm onSubmit={onSubmit} />
     </View>
@@ -41,21 +45,22 @@ console.log(`got data = ${data}`)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2e303c',
+    backgroundColor: theme.mainBack,
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft:15,
     paddingRight:15,
   },
   title: {
-    color :'orange',
+    color: theme.genesysOrange,
     fontSize: 20,
     fontWeight: 'bold',
-    marginTop:10,
+    letterSpacing: 4,
+    marginTop:14,
     marginBottom: 10
   },
   title_sub: {
-    color :'#ffeeaa',
+    color :'#6b6968',
     fontSize: 14,
     fontWeight: 'bold',
     marginTop:10
