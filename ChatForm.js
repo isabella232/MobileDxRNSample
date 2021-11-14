@@ -15,9 +15,9 @@ export const ChatForm = (props) => {
             domain:'inindca.com',
             tokenStoreKey:'com.genesys.messenger.poc',
             email:'',
-            firstName: 'Test',
-            lastName: 'Alpha',
-            phoneNumber:'111-111-111-1',
+            firstName: '',
+            lastName: '',
+            phoneNumber:'',
             logging: false
         }
     });
