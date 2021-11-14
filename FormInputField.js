@@ -2,29 +2,25 @@
 import React from 'react';
 import { Text, View, TextInput } from 'react-native';
 import { Controller } from 'react-hook-form';
+import theme from './theme.style'
 
 export const FormInputField = (props) => {
-
     
-  FormInputField.defaultProps = { 
-    required: true
-  } 
-  
-  console.log(`props.errors?: ${props.errors}`)
+  //console.log(`props.errors?: ${props.errors}`)
 
   return (
-    <View>
+    <View style={props.style.field}>
+      
       <Text style={props.style.label}>{props.title}</Text>
       
       <Controller
         control={props.control}
-        
         render={({field: { onChange, onBlur, value }}) => (
           <TextInput
             style={{
               ...props.style.input,
               ...(props.error && {
-                borderColor: '#ff0000'
+                borderColor: 'red'
               })
             }}
             onBlur={ onBlur }
@@ -32,14 +28,16 @@ export const FormInputField = (props) => {
             value={value}
           />
         )}
-
         name={props.name}
-        
         rules={{ required: props.required }}
       />
 
-      {props.required && <Text style={{ color: "orange" }}>* required</Text>}
+      {props.required && <Text style={{ color: theme.genesysOrange }}>* required</Text>}
     
     </View>
   );
 ß}
+
+FormInputField.defaultProps = { 
+  required: true
+} 

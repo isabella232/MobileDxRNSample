@@ -1,22 +1,13 @@
-import React, {useState} from 'react';
-import { View, StyleSheet, Text, ScrollView, SafeAreaView } from 'react-native';
-//import CheckBox from '@react-native-community/checkbox';
+import React from 'react';
+import { View, StyleSheet, ScrollView, SafeAreaView } from 'react-native';
 import CheckBox from 'react-native-check-box';
 import { Controller, useForm } from 'react-hook-form'; //https://react-hook-form.com/get-started/#ReactNative
-import Constants from 'expo-constants';
-
 import { FormInputField } from './FormInputField';
 import Button from './PButton';
 import theme from './theme.style'
-import { AppTheme } from 'react-native-windows';
-//import { onChange } from 'react-native-reanimated';
-// import { ScrollView } from 'react-native-gesture-handler';
 
 export const ChatForm = (props) => {
     
-    // const [toggleCheckBox, setToggleCheckBox] = useState(false)
-    // const toggle = React.useCallback(() => setToggleCheckBox(!toggleCheckBox));
-
     const { handleSubmit, control, reset, formState: { errors } } = useForm({
         mode: 'onSubmit',
         defaultValues: {
@@ -33,9 +24,7 @@ export const ChatForm = (props) => {
     
     const onSubmit = data => {
         console.log(data);
-
         props.onSubmit(data)   
-
     };
     
     
@@ -43,67 +32,59 @@ export const ChatForm = (props) => {
     
     return (
         <SafeAreaView style={styles.container}>
-        <ScrollView>
+        
+        <ScrollView >
         
         <FormInputField 
         style={{...styles, marginTop:0}} title="Deployment Id" name="deploymentId" 
         error={errors.deploymentId} control={control}/>
         
-        <FormInputField style={styles} title="Domain" name="domain" 
+        <FormInputField style={{field:{display:'flex'}, ...styles}} title="Domain" name="domain" 
         error={errors.domain} control={control}/>
         
         <FormInputField style={styles} title="Token Store Key" name="tokenStoreKey" 
         error={errors.tokenStoreKey} control={control} />
         
-        <FormInputField style={styles} title="Email" name="email" 
+        <FormInputField style={{field:{display:'none'}, ...styles}} title="Email" name="email" 
         error={errors.email} control={control} required={false}/>
 
-        <FormInputField style={styles} title="First Name" name="firstName" 
+        <FormInputField style={{field:{display:'none'}, ...styles}} title="First Name" name="firstName" 
         error={errors.firstName} control={control} required={false}/>
         
-        <FormInputField style={styles} title="Last Name" name="lastName" 
+        <FormInputField style={{field:{display:'none'}, ...styles}} title="Last Name" name="lastName" 
         error={errors.lastName} control={control} required={false}/>
         
-        <FormInputField style={styles} title="Phone Number" name="phoneNumber" 
+        <FormInputField style={{field:{display:'none'}, ...styles}} title="Phone Number" name="phoneNumber" 
         error={errors.phoneNumber} control={control} required={false}  />
         
-        <View style={styles.row_container_2}>
-        
         <Controller
-        control={control}
-        
-        render={({field: { onChange, onBlur, value }}) => (
-        <View style={styles.row_container_2}>
-        <CheckBox style={styles.checkbox}
-        title="Logging"
-        disabled={false}
-        //value={toggleCheckBox}
-        checkBoxColor= 'black' 
-        checkedCheckBoxColor = {theme.genesysOrange}
-        onChange = {onChange}
-        onClick={()=>{
-            value = !value
-           onChange(value)
-            console.log(`value = ${value}`);
-          }}
-          onBlur = {onBlur}
-        isChecked={value}
-        value = {value}
-        //onValueChange={(newValue) => setToggleCheckBox(newValue)}
+            control={control}
+            render={({field: { onChange, onBlur, value }}) => (
+                <View style={styles.row_container_2}>
+                    <CheckBox style={styles.checkbox}
+                        rightText="Enable logging"
+                        
+                        checkBoxColor= 'black' 
+                        checkedCheckBoxColor = {theme.genesysOrange}
+                        onChange = {onChange}
+                        onClick={()=>{
+                            value = !value
+                            onChange(value)
+                            console.log(`value = ${value}`);
+                            }}
+                            onBlur = {onBlur}
+                        isChecked={value}
+                        value = {value}
+                    />
+                </View>
+            )}
+            name="logging"
         />
-        <Text style={{paddingBottom:4,marginLeft:10, ...styles.label}}>Enable Logging</Text>
-        </View>
-        )}
-        name="logging"
-        
-        
-        />
+    </ScrollView>
 
-        </View>
-        
-        <View style={styles.row_container}>
+    <View style={styles.row_container}>
         <Button
-        style={{marginLeft: 10}}
+        style={{marginLeft: 10,...styles.button}}
         color
         title="Clear"
         onPress={() => {
@@ -120,19 +101,15 @@ export const ChatForm = (props) => {
         />
         
         <Button
-        style={{marginRight: 10}}
+        style={{marginRight: 10, ...styles.button}}
         title="Submit"
         onPress={handleSubmit(onSubmit)}
         />
         </View>
-        </ScrollView>
+     
         </SafeAreaView>
         );
     };
-    
-    // const mainBack = '#2e303c'
-    
-//const 
 
     const styles = StyleSheet.create({
         
@@ -142,8 +119,8 @@ export const ChatForm = (props) => {
             marginBottom: 8,
             width:'100%',
         },
-        row_container_2: {
-            flex: 2,
+        checkbox_container: {
+            flex: 1,
             flexDirection: "row",
             alignSelf: 'flex-start',
             justifyContent: 'flex-start',
@@ -152,20 +129,17 @@ export const ChatForm = (props) => {
             marginTop:8,
         },
         row_container: {
-            flex: 1,
             flexDirection: "row",
-            alignSelf: 'stretch',
             justifyContent: 'space-between',
-            
             padding: 15,
             backgroundColor: theme.mainBack,
             marginTop: 6
         },
         container: {
+            display: 'flex',
             flex: 1,
             flexDirection: "column",
-            alignSelf: 'stretch',
-            justifyContent: 'flex-start',
+            alignSelf:'stretch',
             padding: 15,
             backgroundColor: theme.mainBack,
         },
@@ -178,15 +152,15 @@ export const ChatForm = (props) => {
             borderRadius: 4,
         },
         checkbox: {
-            borderColor: 'black',
-            borderWidth:1,
-            marginTop: 0,
+            marginTop: 20,
             borderRadius:4,
         }, 
         button: {
-            height:45,
-            
-        }
+            height: 45,
+            justifyContent:'space-evenly',
+            alignSelf: 'flex-end'
+        },
+        
     });
     
     

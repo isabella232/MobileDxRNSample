@@ -1,12 +1,10 @@
 
 import React from 'react';
-import { Text, View, StyleSheet, Pressable } from 'react-native';
+import { Text, StyleSheet, Pressable } from 'react-native';
 import theme from './theme.style'
 
 export default function Button(props) {
   const { onPress, title = 'Save', style } = props;
-
-  
 
   return (
     <Pressable style={{...style, ...styles.button}} onPress={onPress}>

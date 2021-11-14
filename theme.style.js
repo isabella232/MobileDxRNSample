@@ -1,5 +1,5 @@
 export default  {
     mainBack : 'white',
     textColor : 'black',
-     genesysOrange: '#ff7328'
-    }
+    genesysOrange: '#FF4F1F'
+}
