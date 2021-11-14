@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
 import { ChatForm } from './ChatForm.js';
 import  ChatButton  from './ChatButton';
 import theme from './theme.style'
@@ -28,14 +28,14 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={{flexDirection: "row", justifyContent: 'center'}}>
       <Image style={{width:35, height:35,marginTop:5}} source={require('./img/genesys-logo-red-180.png')}/>
       <Text style={styles.title}>Genesys Chat</Text>
       </View>
       <Text style={styles.title_sub}>Fill the following parameters to start your chat</Text>
       <ChatForm onSubmit={onSubmit} />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     backgroundColor: theme.mainBack,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft:15,
-    paddingRight:15,
+    marginLeft:15,
+    marginRight:15,
   },
   title: {
     color: theme.genesysOrange,

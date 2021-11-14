@@ -130,7 +130,7 @@ export const ChatForm = (props) => {
         },
         row_container: {
             flexDirection: "row",
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             padding: 15,
             backgroundColor: theme.mainBack,
             marginTop: 6
