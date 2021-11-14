@@ -15,9 +15,9 @@ export const ChatForm = (props) => {
             domain:'inindca.com',
             tokenStoreKey:'com.genesys.messenger.poc',
             email:'',
-            firstName: 'Test',
-            lastName: 'Alpha',
-            phoneNumber:'111-111-111-1',
+            firstName: '',
+            lastName: '',
+            phoneNumber:'',
             logging: false
         }
     });
@@ -36,10 +36,10 @@ export const ChatForm = (props) => {
         <ScrollView >
         
         <FormInputField 
-        style={{...styles, marginTop:0}} title="Deployment Id" name="deploymentId" 
+        style={styles} title="Deployment Id" name="deploymentId" 
         error={errors.deploymentId} control={control}/>
         
-        <FormInputField style={{field:{display:'flex'}, ...styles}} title="Domain" name="domain" 
+        <FormInputField style={styles} title="Domain" name="domain" 
         error={errors.domain} control={control}/>
         
         <FormInputField style={styles} title="Token Store Key" name="tokenStoreKey" 
