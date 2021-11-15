@@ -7,12 +7,10 @@
  */
 
 import React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+import { NativeModules, StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
 import { ChatForm } from './ChatForm.js';
-import  ChatButton  from './ChatButton';
 import theme from './theme.style'
 
-import { NativeModules } from 'react-native';
 const {GenDXChatModule} = NativeModules;
 
 export default function App() {

@@ -9,7 +9,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-native-community/checkbox": "^0.5.9",
     "genesys-mobiledx-chat-rn-module": "1.0.9",
     "jetifier": "^2.0.0",
     "react": "17.0.1",
