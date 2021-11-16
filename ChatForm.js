@@ -14,10 +14,6 @@ export const ChatForm = (props) => {
             deploymentId:'f8aad9d7-f8e7-48e9-ab02-eef92bc4fd2f',
             domain:'inindca.com',
             tokenStoreKey:'com.genesys.messenger.poc',
-            email:'',
-            firstName: '',
-            lastName: '',
-            phoneNumber:'',
             logging: false
         }
     });
@@ -44,18 +40,6 @@ export const ChatForm = (props) => {
         
         <FormInputField style={styles} title="Token Store Key" name="tokenStoreKey" 
         error={errors.tokenStoreKey} control={control} />
-        
-        <FormInputField style={{field:{display:'none'}, ...styles}} title="Email" name="email" 
-        error={errors.email} control={control} required={false}/>
-
-        <FormInputField style={{field:{display:'none'}, ...styles}} title="First Name" name="firstName" 
-        error={errors.firstName} control={control} required={false}/>
-        
-        <FormInputField style={{field:{display:'none'}, ...styles}} title="Last Name" name="lastName" 
-        error={errors.lastName} control={control} required={false}/>
-        
-        <FormInputField style={{field:{display:'none'}, ...styles}} title="Phone Number" name="phoneNumber" 
-        error={errors.phoneNumber} control={control} required={false}  />
         
         <Controller
             control={control}
@@ -92,9 +76,6 @@ export const ChatForm = (props) => {
                 deploymentId:'',
                 domain:'',
                 tokenStoreKey:'',
-                firstName: '',
-                lastName: '',
-                phoneNumber:'',
                 logging:false
             })
         }}
@@ -163,58 +144,3 @@ export const ChatForm = (props) => {
         
     });
     
-    
-    /*
-
-    <Text style={styles.label}>Deployment Id</Text>
-        <Controller
-      control={control}
-      name="deploymentId1"
-      render={({ field: { onChange, onBlur, value } }) => (
-          <TextInput
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={value => onChange(value)}
-              value={value}
-          />
-      )}
-      rules={{ required: true }}
-  />
-{errors?.deploymentId1?.type === 'required' && <Text style={{ color: "red" }}>First name is required</Text>}
-
-    
-    <Text style={styles.label}>Deployment Id</Text>
-    <Controller
-    control={control}
-    
-    render={({field: { onChange, onBlur, value }}) => (
-        <TextInput
-        placeholder="shit on your pants"
-        style={styles.input}
-        onBlur={onBlur}
-        onChangeText={value => onChange(value)}
-        value={value}
-        />
-        )}
-        name="deploymentId"
-        rules={{ required: true }}
-        />
-        {errors.deploymentId && <Text>This is required.</Text>}
-        
-        
-        <Text style={styles.label}>Last name</Text>
-        <Controller
-        control={control}
-        render={({field: { onChange, onBlur, value }}) => (
-            <TextInput
-            style={styles.input}
-            onBlur={onBlur}
-            onChangeText={value => onChange(value)}
-            value={value}
-            />
-            )}
-            name="lastName"
-            rules={{ required: true }}
-            />
-            
-            */
