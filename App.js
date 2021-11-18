@@ -11,7 +11,7 @@ import { NativeModules, StyleSheet, Text, View, Image, SafeAreaView } from 'reac
 import { ChatForm } from './ChatForm.js';
 import theme from './theme.style'
 
-const {GenDXChatModule} = NativeModules;
+const { GenDXChatModule } = NativeModules;
 
 export default function App() {
 
@@ -21,9 +21,7 @@ export default function App() {
     GenDXChatModule.startChat(data.deploymentId, data.domain,
     data.tokenStoreKey, data.logging);
 
-    /*GenDXChatModule.startChatWithUser(data.deploymentId, data.domain,
-    data.tokenStoreKey, data.logging, data.email, data.phoneNumber, data.firstName, data.lastName);*/
-  }
+   }
 
   return (
     <SafeAreaView style={styles.container}>
