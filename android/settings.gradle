@@ -4,9 +4,9 @@ rootProject.name = 'MobileDxRNSample'
 
 include ':app'
 
-include ':genesys-mobiledx-chat-rn-module'
-project(':genesys-mobiledx-chat-rn-module').projectDir = new File(rootProject.projectDir,
-        '../node_modules/genesys-mobiledx-chat-rn-module/android')
+include ':genesys-messenger-mobile-sdk-react-native-wrapper'
+project(':genesys-messenger-mobile-sdk-react-native-wrapper').projectDir = new File(rootProject.projectDir,
+        '../node_modules/genesys-messenger-mobile-sdk-react-native-wrapper/android')
 // for local usage of the library:
-//'../../mobile-genesys-chat-rn-module/android')//
+//'../../../genesys-messenger-mobile-sdk-react-native-wrapper/android')//
 

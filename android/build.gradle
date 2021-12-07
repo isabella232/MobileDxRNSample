@@ -14,8 +14,8 @@ buildscript {
         maven { url "https://jitpack.io" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.30"
+        classpath 'com.android.tools.build:gradle:4.2.2'
+      
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -23,7 +23,9 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenLocal()
+        mavenCentral()
+        
+        //mavenLocal()
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url("$rootDir/../node_modules/react-native/android")
@@ -34,10 +36,8 @@ allprojects {
         }
 
         google()
-        mavenCentral()
         maven { url 'https://www.jitpack.io' }
 	
-	    maven {url "https://bold360ai-mobile-artifacts.s3.amazonaws.com/dx/android/dev/"}
-	    maven {url "https://bold360ai-mobile-artifacts.s3.amazonaws.com/dx/common/dev/"}
+	    maven {url "https://genesysdx.jfrog.io/artifactory/genesysdx-android.dev"}
     }
 }
