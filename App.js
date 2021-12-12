@@ -11,19 +11,17 @@ import { NativeModules, StyleSheet, Text, View, Image, SafeAreaView } from 'reac
 import { ChatForm } from './ChatForm.js';
 import theme from './theme.style'
 
-const {GenDXChatModule} = NativeModules;
+const { GenesysCloud } = NativeModules;
 
 export default function App() {
 
   const onSubmit = (data) => {
     console.log(`got data = ${data}`)
 
-    GenDXChatModule.startChat(data.deploymentId, data.domain,
+    GenesysCloud.startChat(data.deploymentId, data.domain,
     data.tokenStoreKey, data.logging);
 
-    /*GenDXChatModule.startChatWithUser(data.deploymentId, data.domain,
-    data.tokenStoreKey, data.logging, data.email, data.phoneNumber, data.firstName, data.lastName);*/
-  }
+   }
 
   return (
     <SafeAreaView style={styles.container}>

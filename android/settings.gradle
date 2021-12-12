@@ -1,12 +1,12 @@
 rootProject.name = 'MobileDxRNSample'
-// include ':react-native-gesture-handler'
-// project(':react-native-gesture-handler').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-gesture-handler/android')
+
 //apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+
 include ':app'
 
-include ':genesys-mobiledx-chat-rn-module'
-project(':genesys-mobiledx-chat-rn-module').projectDir = new File(rootProject.projectDir,
-        '../node_modules/genesys-mobiledx-chat-rn-module/android')
+include ':genesys-messenger-mobile-sdk-react-native-wrapper'
+project(':genesys-messenger-mobile-sdk-react-native-wrapper').projectDir = new File(rootProject.projectDir,
+        '../node_modules/genesys-messenger-mobile-sdk-react-native-wrapper/android')
 // for local usage of the library:
-//'../../mobile-genesys-chat-rn-module/android')//
+//'../../../genesys-messenger-mobile-sdk-react-native-wrapper/android')//
 
