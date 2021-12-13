@@ -4,9 +4,9 @@ rootProject.name = 'MobileDxRNSample'
 
 include ':app'
 
-include ':genesys-messenger-mobile-sdk-react-native-wrapper'
-project(':genesys-messenger-mobile-sdk-react-native-wrapper').projectDir = new File(rootProject.projectDir,
-        '../node_modules/genesys-messenger-mobile-sdk-react-native-wrapper/android')
+include ':genesys-cloud-messenger-mobile-sdk-rn-wrapper'
+project(':genesys-cloud-messenger-mobile-sdk-rn-wrapper').projectDir = new File(rootProject.projectDir,
+        '../node_modules/genesys-cloud-messenger-mobile-sdk-rn-wrapper/android')
 // for local usage of the library:
-//'../../../genesys-messenger-mobile-sdk-react-native-wrapper/android')//
+//'../../genesys-cloud-messenger-mobile-sdk-rn-wrapper/android')//
 
