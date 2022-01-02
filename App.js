@@ -20,13 +20,13 @@ export default function App() {
   const onSubmit = (data) => {
     console.log(`got data = ${data}`)
     
-    if(orientation != undefined){
+    if(orientation != undefined) {
       GenesysCloud.requestScreenOrientation(orientation)
     }
-    GenesysCloud.startChat(data.deploymentId, data.domain,
-    data.tokenStoreKey, data.logging);
+    
+    GenesysCloud.startChat(data.deploymentId, data.domain, data.tokenStoreKey, data.logging);
 
-   }
+  }
 
   return (
     <SafeAreaView style={styles.container}>
