@@ -7,21 +7,26 @@
  */
 
 import React from 'react';
-import { NativeModules, StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+import { NativeModules, Platform, StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
 import { ChatForm } from './ChatForm.js';
 import theme from './theme.style'
 
 const { GenesysCloud } = NativeModules;
 
+const orientation = Platform.OS ===  'android' ? GenesysCloud.getConstants().SCREEN_ORIENTATION_LOCKED : undefined
+
 export default function App() {
 
   const onSubmit = (data) => {
     console.log(`got data = ${data}`)
+    
+    if(orientation != undefined) {
+      GenesysCloud.requestScreenOrientation(orientation)
+    }
+    
+    GenesysCloud.startChat(data.deploymentId, data.domain, data.tokenStoreKey, data.logging);
 
-    GenesysCloud.startChat(data.deploymentId, data.domain,
-    data.tokenStoreKey, data.logging);
-
-   }
+  }
 
   return (
     <SafeAreaView style={styles.container}>
