@@ -23,7 +23,7 @@ export default function App() {
   const [isSnackVisible, setIsSnackVisible] = useState(false)
   const [errorMessage, setMessage] = useState("");  
 
-  // Received error is of the following format: {errorCode:"", reason:"", message:""}
+  // Error event is of the following format: {errorCode:"", reason:"", message:""}
   const onError = (error) => {
     const snackMessage = error.message ?? error.reason
     console.log(`onError: errorCode = ${error.errorCode}, message = ${snackMessage}`);  
@@ -31,8 +31,8 @@ export default function App() {
     setIsSnackVisible(true)
   };
   
-  // Adds a listener to the chat onError event.
-  DeviceEventEmitter.addListener('onError', onError);
+  // Adds a listener to messenger chat errors.
+  DeviceEventEmitter.addListener('onMessengerError', onError);
   
   // data contains the fields content
   const onSubmit = (data) => {
